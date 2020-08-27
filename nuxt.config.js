@@ -36,6 +36,11 @@ export default {
   */
   plugins: [
   ],
+  webfontloader: {
+    google: {
+      families: ['Buernard:400,700']
+    }
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components

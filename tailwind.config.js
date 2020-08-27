@@ -5,7 +5,14 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
+  theme: {
+    fontFamily: {
+      serif: ['Crimson Text']
+    },
+    colors: {
+      duckgreen: '#147673'
+    }
+  },
   variants: {},
   plugins: [],
   purge: {
