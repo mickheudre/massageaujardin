@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col justify-center content-center items-center">
-    <h1 class="mt-16 mb-8 text-4xl font-serif font-bold text-duckgreen text-center">
-      Massage pour toutes
-    </h1>
-    <img class="w-64 self-center" src="../assets/img/logo.png"></img>
+    <img class="mt-16 mb-8 w-64" src="../assets/img/titre.png">
+    <img class="w-64 self-center" src="../assets/img/logo.png">
     <h6 class="my-8 text-l text-duckgreen text-center">
       Site en construction
     </h6>
