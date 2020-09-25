@@ -7,7 +7,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      serif: ['Crimson Text']
+      serif: ['Buernard'],
     },
     colors: {
       duckgreen: '#147673'
