@@ -33,6 +33,9 @@ export default {
       families: ['Buernard:400,700']
     }
   },
+  sitemap: {
+    hostname: 'https://massageaujardin.fr'
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
@@ -52,7 +55,8 @@ export default {
   */
   modules: [
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Content module configuration
