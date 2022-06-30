@@ -46,7 +46,7 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
@@ -56,8 +56,17 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/axios'
   ],
+  axios: {
+    headers: {
+      common: {
+        'Notion-Version': '2021-05-13',
+        'Authorization': process.env.NOTION_TOKEN
+      }
+    }
+  },
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
