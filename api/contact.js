@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       let info = await transporter.sendMail({
         from: process.env.FORM_EMAIL, // sender address
         to: process.env.FORM_CONTACT, // list of receivers
-        subject: 'Hello ✔', // Subject line
+        subject: `Nouveau message de la part de ${body.prenom} ${body.nom}`, // Subject line
         text: message, // plain text body
         html: message, // html body
       });
