@@ -3,7 +3,11 @@ const nodemailer = require('nodemailer');
 export default async function handler(req, res) {
     const { body } = req;
 
-    if (body === undefined || body.name === undefined) {
+    if (body === undefined ||
+      body.prenom === undefined ||
+      body.nom === undefined ||
+      body.contact === undefined ||
+      body.message === undefined) {
         return res.status(502).send("Invalid Request");
     }
     let transporter = nodemailer.createTransport({
@@ -15,14 +19,17 @@ export default async function handler(req, res) {
           pass: process.env.FORM_PASSWORD, // generated ethereal password
         },
       });
-    
+      let message = `<h1>Nouveau message de la part de ${body.prenom} ${body.nom}</h1>
+      <p>Contact ${body.contact}</p>
+      <p>${body.message}</p>`;
+
       // send mail with defined transport object
       let info = await transporter.sendMail({
         from: process.env.FORM_EMAIL, // sender address
         to: process.env.FORM_CONTACT, // list of receivers
         subject: 'Hello ✔', // Subject line
-        text: `Hello ${body.name}`, // plain text body
-        html: `<b>Hello ${body.name}</b>`, // html body
+        text: message, // plain text body
+        html: message, // html body
       });
 
     return res.status(200).send("Success");
