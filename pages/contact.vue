@@ -62,7 +62,7 @@ export default {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({prenom: this.prenom, nom: this.nom, contact: this.contact, message: this.message})
         };
-  fetch("https://massageaujardin.fr/api/contact", requestOptions)
+  fetch("/api/contact", requestOptions)
     .then(response => console.log(response))
     }
   }
