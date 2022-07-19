@@ -1,6 +1,6 @@
 <template>
-    <form class="max-w-lg md:mx-auto mx-8 my-16">
-        <h2 class="my-8 font-serif text-leaf text-3xl ">Vous pouvez me contacter par l'intermediaire de ce formulaire</h2>
+    <form class="max-w-lg md:mx-auto mx-8">
+        <h2 class="mb-8 pt-16 font-serif text-leaf text-3xl ">Vous pouvez me contacter par l'intermediaire de ce formulaire</h2>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-leaf text-xs font-bold mb-2" for="grid-first-name">
