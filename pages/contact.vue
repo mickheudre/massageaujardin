@@ -62,7 +62,13 @@ export default {
             body: JSON.stringify({prenom: this.prenom, nom: this.nom, contact: this.contact, message: this.message})
         };
   fetch("/api/contact", requestOptions)
-    .then(response => console.log(response))
+    .then((response) => {
+      if (response.status === 200) {
+        this.$router.push({
+          path: '/success'
+        })
+      }
+    })
     }
   }
 }
