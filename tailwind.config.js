@@ -7,10 +7,13 @@
 module.exports = {
   theme: {
     fontFamily: {
-      serif: ['Buernard'],
+      serif: ['Buenard'],
     },
     colors: {
-      duckgreen: '#147673'
+      duckgreen: '#147673',
+      cream: '#DAD7CD',
+      leaf: '#344E41',
+      norway: '#A3B18A'
     }
   },
   variants: {},

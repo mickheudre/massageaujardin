@@ -30,7 +30,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Buernard:400,700']
+      families: ['Buenard:400,600,700']
     }
   },
   sitemap: {
