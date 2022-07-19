@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-cream">
     <header>
       <!-- <img class="w-24 mt-4 mx-8" alt="Emilie Ibanez" src="../assets/img/emilie-ibanez.png"> -->
     </header>
