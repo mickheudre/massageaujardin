@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ['Buenard'],
+      sans: ['Source Sans Pro']
     },
     colors: {
       duckgreen: '#147673',
@@ -17,7 +18,8 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+  ],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === 'production',

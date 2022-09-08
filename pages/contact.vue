@@ -29,12 +29,16 @@
       <label class="block uppercase tracking-wide text-leaf text-xs font-bold mb-2" for="grid-password">
         Message
       </label>
-      <textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" v-model="message"></textarea>
+      <textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" v-model="message"></textarea>
     </div>
   </div>
+  <div class="md:flex md:items-center my-4">
+    <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-leaf bg-gray-100 rounded border-gray-300">
+    <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">J'accepte d'être contacté par mail ou par téléphone</label>
+    </div>
   <div class="md:flex md:items-center">
     <div class="md:w-1/2">
-      <button  @click="send" class="bg-leaf hover:bg-leaf  focus:outline-none text-cream font-bold pt-3 pb-4 px-4 rounded" type="button">
+      <button  @click="send" class="bg-leaf hover:bg-leaf focus:outline-none text-cream font-bold pt-3 pb-4 px-4 rounded" type="button">
         Envoyer le message
       </button>
     </div>
