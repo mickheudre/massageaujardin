@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ['Buenard'],
-      sans: ['Source Sans Pro']
+      sans: ['Noto Sans'],
+      poppins: ['Poppins']
     },
     colors: {
       duckgreen: '#147673',
