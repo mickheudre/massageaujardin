@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto my-8 w-1/3 ">
+  <div class="mx-auto my-8 md:w-1/3 ">
     <div class="mx-auto my-4 flex justify-between cursor-pointer" @click="visible=!visible">
       <h5 class="inline-block text-leaf font-sans text-lg font-semibold">
         {{ title }}
