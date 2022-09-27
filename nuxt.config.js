@@ -30,7 +30,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Buenard:400,600,700', 'Source Sans Pro:400,600', 'Noto Sans:400,600']
+      families: ['Buenard:400,600,700', 'Noto Sans:400,600']
     }
   },
   sitemap: {
@@ -57,7 +57,8 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-webfontloader'
   ],
   axios: {
     headers: {
