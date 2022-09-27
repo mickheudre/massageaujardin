@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-10 md:mx-16 xl:ml-56 xl:mr-32 my-18">
-    <div class="flex items-center flex-col-reverse md:flex-row  my-auto min-h-screen justify-center">
+  <div class=" my-18">
+    <div class="mx-10 md:mx-16 xl:ml-56 xl:mr-32 flex items-center flex-col-reverse md:flex-row  my-auto min-h-screen justify-center">
       <div class="flex-col flex-shrink-0 md:w-1/2 max-w-screen-sm ">
         <Page class="text-leaf font-serif my-1 text-5xl xl:text-6xl leading-tight xl:leading-snug" :page="headline" />
         <Page class="text-leaf font-sans text-sm xl:text-md text-justify mt-6 mb-16" :page="presentation" />
@@ -15,9 +15,12 @@
         </div>
         </div>
       </div>
-      <div class="md:w-1/2  flex flex-col items-center justify-center">
+      <div class="md:w-1/2 flex flex-col items-center justify-center">
         <img class="w-1/2 mt-12 mb-6 md:my-0 md:w-3/5 xl:w-2/5" style="mix-blend-mode:multiply" alt="Une illustration de deux mains" src="../assets/img/hand.png">
       </div>
+    </div>
+    <div class="md:block hidden absolute bottom-0 mb-16 w-screen">
+      <ArrowDown class="mx-auto w-8 h-8 animate-bounce text-leaf" />
     </div>
     <div class="flex items-top flex-col lg:flex-row mx-8 md:mx-32 my-32 my-auto justify-center lg:space-x-16 xl:space-x-64">
       <div class="flex flex-col lg:w-1/2 lg:max-w-screen-sm items-center">
@@ -55,9 +58,11 @@ import Page from '../components/Notion/Page.vue'
 import Logo from '../components/Logo.vue'
 import Waves from '../components/Waves.vue'
 import Faq from '../components/Faq.vue'
+import Chevron from '../components/Chevron.vue'
+import ArrowDown from '../components/ArrowDown.vue'
 
 export default {
-  components: { Page, Logo, Waves, Faq },
+  components: { Page, Logo, Waves, Faq, Chevron, ArrowDown },
   async asyncData ({ $axios }) {
     const headline = await $axios.$get(
       'https://api.notion.com/v1/blocks/9b8b8fece480454b9e0716be569ffffa/children',

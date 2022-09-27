@@ -4,7 +4,7 @@
       <h5 class="inline-block text-leaf font-sans text-lg font-semibold">
         {{ title }}
       </h5>
-      <Chevron class="inline-block text-leaf" />
+      <Chevron class="inline-block text-leaf transform" :class="[visible ? 'rotate-90' :'']" />
     </div>
     <p class="text-leaf mb-16" :class="[visible ? 'block': 'hidden']">
      {{ body }}
