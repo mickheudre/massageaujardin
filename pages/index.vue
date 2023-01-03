@@ -8,9 +8,7 @@
           <div class="inline-block lg:flex lg:flex-row md:space-x-8 items-center">
             <a class="flex-shrink-0 bg-leaf hover:bg-leaf text-lg focus:outline-none text-cream justify-center font-bold pt-5 pb-6 px-10 rounded" href="/contact">Prendre un rendez-vous </a>
             <div class="flex">
-              <p class="flex-1 text-xs text-leaf w-0 lg:w-auto text-left py-10">
-                Je propose une tarrification solidaire afin que toute personne, quelque soit ses moyens, puisse accéder à des pratiques de soins.
-              </p>
+              <Page class="flex-1 text-xs text-leaf w-0 lg:w-auto text-left py-10" :page="solidaire" />
             </div>
           </div>
         </div>
@@ -28,14 +26,14 @@
         <h3 class="text-leaf font-serif text-3xl mt-4 mb-8">
           Massages
         </h3>
-        <Page class="text-leaf font-sans text-md text-justify" :page="massages" />
+        <Page class="text-leaf font-sans text-sm text-justify" :page="massages" />
       </div>
       <div class="flex flex-col lg:w-1/2 lg:max-w-screen-sm items-center">
         <div class="w-32 h-32 bg-norway" />
         <h3 class="text-leaf font-serif text-3xl mt-4 mb-8">
           Accompagnement par les plantes
         </h3>
-        <Page class="text-leaf font-sans text-md text-justify" :page="plantes" />
+        <Page class="text-leaf font-sans text-sm text-justify" :page="plantes" />
       </div>
     </div>
     <Waves class="w-48 mx-auto my-12 md:my-24 fill-current text-norway" />
@@ -71,6 +69,13 @@ export default {
     'https://api.notion.com/v1/blocks/1f765b3fe8954a45845969bed726119b/children',
     {}
     )
+    
+
+    const solidaire = await $axios.$get(
+    'https://api.notion.com/v1/blocks/abdb96e9d6bb4a3493ec07e673428c89/children',
+    {}
+    )
+
     const massages = await $axios.$get(
     'https://api.notion.com/v1/blocks/1d3568fa61e74a85998ba143302e7dda/children',
     {}
@@ -95,7 +100,7 @@ export default {
       }
     }
     
-    return { headline, presentation, massages, plantes, qa }
+    return { headline, presentation, solidaire, massages, plantes, qa }
   },
   head () {
     return {
@@ -113,10 +118,8 @@ export default {
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+<style >
+.toggle-text {
+  @apply text-leaf text-sm my-2
 }
-*/
 </style>

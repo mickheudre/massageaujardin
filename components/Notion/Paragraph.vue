@@ -1,6 +1,6 @@
 <template>
     <p ref="paragraph"> 
-        <StyledText v-for="element in this.block.paragraph.rich_text" :key="element" :text="element"></StyledText>
+        <StyledText v-for="(element, index) in this.block.paragraph.rich_text" :key="index" :text="element"></StyledText>
     </p>
 </template>
 
