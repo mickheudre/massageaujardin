@@ -15,14 +15,17 @@
     <li v-if="isValidBulletedListItem(this.block)">
       {{ this.block.bulleted_list_item.text[0].text.content }}
     </li>
+    <toggle v-if="isValidToggleItem(this.block)" :block="this.block" />
   </div>
 </template>
 
 <script>
 import Paragraph from "./Paragraph.vue";
+import Toggle from "./Toggle.vue"
 
 export default {
-  components: { Paragraph },
+  name: 'Block',
+  components: { Paragraph, Toggle },
   props: {
     block: Object,
   },
@@ -31,7 +34,12 @@ export default {
       if (block.type !== "paragraph") {
         return false;
       }
-      if (block.paragraph.text.length == 0) {
+
+      if (block.paragraph.rich_text.length == 0) {
+        return false;
+      }
+
+      if (block.paragraph.rich_text[0].plain_text.length == 0) {
         return false;
       }
       return true;
@@ -50,6 +58,20 @@ export default {
         return false;
       }
       if (block.bulleted_list_item.text.length == 0) {
+        return false;
+      }
+      return true;
+    },
+    isValidToggleItem(block) {
+      if (block.type !== "toggle") {
+        return false;
+      }
+      
+      if (block.toggle.rich_text.length == 0) {
+        return false;
+      }
+
+      if (block.toggle.rich_text[0].plain_text.length == 0) {
         return false;
       }
       return true;
