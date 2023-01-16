@@ -14,10 +14,10 @@
       <Nuxt />
     </div>
     <footer>
-      <div class="bg-white w-full flex justify-between px-8 py-4 text-sm items-center">
-        <span class="w-64">Massage pour toutes fait partie de la coopérative <a class="font-bold" href="https://www.vecteuractivites.com/">Vecteur Activités</a> </span>
-        <NuxtLink to="/mentions-legales">Mentions Légales</NuxtLink>
-        <span>Site développé par <a href="https://mickheudre.me">Mickaël</a>, avec des dessins de <a href="https://cmllemrtn.com/">Camille</a>.</span>
+      <div class="bg-white w-full flex flex-col sm:flex-row text-leaf sm:justify-between px-8 py-4 text-sm sm:items-center">
+        <span class="sm:w-64 my-1">Massage pour toutes fait partie de la coopérative <a class="font-bold" href="https://www.vecteuractivites.com/">Vecteur Activités</a> </span>
+        <NuxtLink class="font-bold my-1" to="/mentions-legales">Mentions Légales</NuxtLink>
+        <span class="my-1">Site développé par <a class="font-bold" href="https://mickheudre.me">Mickaël</a>, avec des dessins de <a class="font-bold" href="https://cmllemrtn.com/">Camille</a>.</span>
       </div>
     </footer>
   </div>
