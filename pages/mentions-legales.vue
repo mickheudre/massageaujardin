@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flew-col justify-center">
-        <div class="max-w-xl text-leaf">
+    <div class="flex flew-col justify-center pb-12">
+        <div class="max-w-xl text-leaf mx-10">
             <h1 class="font-serif text-6xl py-8">Mentions Légales</h1>
             <Page :page="content" />
         </div>
