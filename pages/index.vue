@@ -40,8 +40,8 @@
     <h4 class="text-center mx-10 sm:mx-auto text-leaf font-serif text-xl xl:text-3xl py-12">
       Le dialogue et l’écoute ont une place centrale dans mes pratiques. <br> Nous construirons ensemble chaque séance, en fonction de vos attentes et votre état présent.
     </h4>
-    <div class="py-8 max-w-xl mx-auto">
-      <Page :page="qa" class="mx-10"/>
+    <div class="py-8 max-w-xl mx-10 sm:mx-auto">
+      <Page :page="qa" class="w-full"/>
     </div>
     <div class="flex justify-center my-16">
       <a class="text-center bg-leaf hover:bg-leaf text-lg focus:outline-none text-cream font-bold pt-5 pb-6 px-10 rounded" href="/contact">Me contacter </a>

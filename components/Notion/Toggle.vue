@@ -1,10 +1,10 @@
 <template>
-    <div class="notion-toggle">
-        <div class="flex justify-between items-center cursor-pointer" @click="visible=!visible">
-            <h5 class="notion-toggle-title inline-block">
+    <div class="notion-toggle w-full">
+        <div class="flex   justify-between items-center cursor-pointer" @click="visible=!visible">
+            <h5 class="notion-toggle-title w-4/5">
                 {{ block.toggle.rich_text[0].plain_text }}
             </h5>
-            <Chevron class="inline-block text-leaf transform" :class="[visible ? 'rotate-90' :'']" />
+            <Chevron class="transform text-leaf" :class="[visible ? 'rotate-90' :'']" />
         </div>
         <div  :class="visible ? 'block' : 'hidden'">
             <p class="toggle-text" v-for="element in this.block.children.results" :key="element.id"> {{ element.paragraph.rich_text[0].plain_text }} </p>
