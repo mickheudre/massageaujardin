@@ -1,5 +1,5 @@
 <template>
-  <div class=" my-18">
+  <div class=" my-18 max-w-screen">
     <div class="mx-10 md:mx-16 xl:ml-56 xl:mr-32 flex items-center flex-col-reverse md:flex-row  my-auto min-h-screen justify-center">
       <div class="flex-col flex-shrink-0 md:w-1/2 max-w-screen-sm ">
         <Page class="text-leaf font-serif my-1 text-5xl xl:text-6xl leading-tight" :page="headline" />
@@ -17,7 +17,7 @@
         <img class="w-1/2 mt-12 mb-6 md:my-0 md:w-3/5 xl:w-2/5" style="mix-blend-mode:multiply" alt="Une illustration de deux mains" src="../assets/img/hand.png">
       </div>
     </div>
-    <div class="md:block hidden absolute bottom-0 mb-16 w-screen">
+    <div class="md:block hidden absolute bottom-0 mb-8 w-full  px-12">
       <ArrowDown class="mx-auto w-8 h-8 animate-bounce text-leaf" />
     </div>
     <div class="flex items-top flex-col lg:flex-row mx-8 md:mx-32 my-32 my-auto justify-center lg:space-x-16 xl:space-x-64">
@@ -38,16 +38,16 @@
     </div>
     <Waves class="w-48 mx-auto my-12 md:my-24 fill-current text-norway" />
     <h4 class="text-center mx-auto text-leaf font-serif text-xl xl:text-3xl py-12">
-      Le dialogue et l’écoute ont une place centrale dans mes pratiques. <br> Nous construirons ensemble chaque scéance, en fonction de vos attentes et votre état présent.
+      Le dialogue et l’écoute ont une place centrale dans mes pratiques. <br> Nous construirons ensemble chaque séance, en fonction de vos attentes et votre état présent.
     </h4>
-    <div class="py-8">
+    <div class="py-8 max-w-xl mx-auto">
       <Page :page="qa" />
     </div>
     <div class="flex justify-center my-16">
       <a class="text-center bg-leaf hover:bg-leaf text-lg focus:outline-none text-cream font-bold pt-5 pb-6 px-10 rounded" href="/contact">Me contacter </a>
     </div>
     
-    <div class="h-32 w-screen" />
+    <div class="h-32 max-w-screen" />
   </div>
 </template>
 
@@ -121,5 +121,8 @@ export default {
 <style >
 .toggle-text {
   @apply text-leaf text-sm my-2
+}
+.notion-toggle-title {
+  @apply text-leaf text-lg font-semibold mt-4 mb-2;
 }
 </style>

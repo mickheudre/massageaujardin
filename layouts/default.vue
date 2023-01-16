@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-cream">
+  <div class="bg-cream max-w-screen scrollbar-hide">
     <header>
       <!-- <div class="fixed w-full flex flex-row justify-between mt-16 mb-4">
         <Logo class="h-16 fill-current text-leaf mx-16" />
@@ -13,6 +13,13 @@
     <div class="min-h-screen">
       <Nuxt />
     </div>
+    <footer>
+      <div class="bg-white w-full flex justify-between px-8 py-4 text-sm items-center">
+        <span class="w-64">Massage pour toutes fait partie de la coopérative <a class="font-bold" href="https://www.vecteuractivites.com/">Vecteur Activités</a> </span>
+        <NuxtLink to="/mentions-legales">Mentions Légales</NuxtLink>
+        <span>Site développé par <a href="https://mickheudre.me">Mickaël</a>, avec des dessins de <a href="https://cmllemrtn.com/">Camille</a>.</span>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -24,3 +31,14 @@ export default {
 
 }
 </script>
+
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+</style>
