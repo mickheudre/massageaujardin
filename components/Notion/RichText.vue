@@ -49,10 +49,7 @@
 				</span>
 				{{ element[element.type].content }}
 			</a>
-			<span v-else>
-
 				{{ element[element.type].content }}
-			</span>
 		</span>
 	</div>
 </template>
