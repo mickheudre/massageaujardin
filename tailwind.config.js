@@ -15,7 +15,11 @@ module.exports = {
       cream: '#DAD7CD',
       leaf: '#344E41',
       norway: '#A3B18A'
+    },
+    lineHeight: {
+      'extra-tight': '1.15',
     }
+      
   },
   variants: {},
   plugins: [

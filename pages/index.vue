@@ -2,8 +2,8 @@
   <div class=" my-18 max-w-screen">
     <div class="mx-10 md:mx-16 xl:ml-56 xl:mr-32 flex items-center flex-col-reverse md:flex-row  my-auto min-h-screen justify-center">
       <div class="flex-col flex-shrink-0 md:w-1/2 max-w-screen-sm ">
-        <Page class="text-leaf font-serif my-1 text-5xl xl:text-6xl leading-tight" :page="headline" />
-        <Page class="text-leaf font-sans text-sm xl:text-md text-justify mt-6 mb-16" :page="presentation" />
+        <Page class="text-leaf font-serif my-1 text-5xl xl:text-6xl leading-extra-tight" :page="headline" />
+        <Page class="text-leaf font-sans text-sm xl:text-md text-justify mt-12 mb-16" :page="presentation" />
         <div class="w-full text-center">
           <div class="inline-block lg:flex lg:flex-row md:space-x-8 items-center">
             <a class="flex-shrink-0 bg-leaf hover:bg-leaf text-lg focus:outline-none text-cream justify-center font-bold pt-5 pb-6 px-10 rounded" href="/contact">Prendre un rendez-vous </a>
