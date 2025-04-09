@@ -22,16 +22,20 @@
     </div>
     <div class="flex items-top flex-col lg:flex-row mx-8 md:mx-32 my-32 my-auto justify-center lg:space-x-16 xl:space-x-64">
       <div class="flex flex-col lg:w-1/2 lg:max-w-screen-sm items-center">
-        <div class="w-32 h-32 bg-norway" />
+        <div class="w-32 h-32 bg-norway" >
+          <img  style="mix-blend-mode:screen" src="../assets/img/plants.png"/>
+        </div>
         <h3 class="text-leaf font-serif text-3xl mt-4 mb-8">
           Massages
         </h3>
         <Page class="text-leaf font-sans text-sm text-justify" :page="massages" />
       </div>
       <div class="flex flex-col lg:w-1/2 lg:max-w-screen-sm items-center">
-        <div class="w-32 h-32 bg-norway" />
+        <div class="w-32 h-32 bg-norway" >
+          <img  style="mix-blend-mode:screen" src="../assets/img/hands.png"/>
+        </div>
         <h3 class="text-leaf font-serif text-3xl mt-4 mb-8">
-          Accompagnement par les plantes
+          Shiatsu
         </h3>
         <Page class="text-leaf font-sans text-sm text-justify" :page="plantes" />
       </div>
@@ -70,12 +74,12 @@ export default {
     {}
     )
     
-
+    
     const solidaire = await $axios.$get(
     'https://api.notion.com/v1/blocks/abdb96e9d6bb4a3493ec07e673428c89/children',
     {}
     )
-
+    
     const massages = await $axios.$get(
     'https://api.notion.com/v1/blocks/1d3568fa61e74a85998ba143302e7dda/children',
     {}
