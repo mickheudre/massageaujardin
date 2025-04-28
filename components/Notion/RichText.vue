@@ -49,15 +49,14 @@
 				</span>
 				{{ element[element.type].content }}
 			</a>
+			<span v-else>
+
 				{{ element[element.type].content }}
+			</span>
 		</span>
 	</div>
 </template>
 
-<script>
-export default {
-    props: {
-        richText: Array
-    }
-}
+<script setup>
+const props = defineProps(["richText"]);
 </script>

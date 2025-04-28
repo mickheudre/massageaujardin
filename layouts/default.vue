@@ -11,7 +11,7 @@
       <!-- <img class="w-24 mt-4 mx-8" alt="Emilie Ibanez" src="../assets/img/emilie-ibanez.png"> -->
     </header>
     <div class="min-h-screen">
-      <Nuxt />
+      <NuxtPage />
     </div>
     <footer>
       <div class="bg-white w-full flex flex-col sm:flex-row text-leaf sm:justify-between px-8 py-4 text-sm sm:items-center">
@@ -22,15 +22,6 @@
     </footer>
   </div>
 </template>
-
-<script>
-import Logo from '../components/Logo.vue'
-
-export default {
-  components: { Logo },
-
-}
-</script>
 
 <style>
 .scrollbar-hide::-webkit-scrollbar {

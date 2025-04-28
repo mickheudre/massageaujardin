@@ -1,16 +1,11 @@
 <template>
     <p ref="paragraph"> 
-        <StyledText v-for="(element, index) in this.block.paragraph.rich_text" :key="index" :text="element"></StyledText>
+        <NotionStyledText v-for="(element, index) in block.paragraph.rich_text" :key="index" :text="element"></NotionStyledText>
     </p>
 </template>
 
-<script>
-import StyledText from './StyledText.vue'
+<script setup>
 
-export default {
-    components: { StyledText }, 
-    props: {
-        block: Object
-    }
-}
+const props = defineProps(['block'])
+
 </script>
